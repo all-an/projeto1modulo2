@@ -8,6 +8,8 @@
     <title>Lista de Compras</title>
 </head>
 <body>
+
+    <!-- menu filtro, botão e afins -->
     <header>
         <div class="menu">
             <button id="menuBotao" class="abrefiltro-button" >Filtrar</button>
@@ -17,17 +19,28 @@
                 <a onclick="trocaNome('Pendentes')" href="#pendentes">Pendentes</a>
             </div>
         </div>
-        <div id="principal" class="header_lista_compras">
-            Todos os Itens
-        </div>
+        <div id="principal" class="header_lista_compras">Todos os Itens</div>
     </header>
+
+    <!-- div principal, lista compras, inserção e afins -->
     <div class="lista">
         <div class="lista_titulo">Lista de Compras</div>
         <!-- lista -->
         <div class="lista_compras" id='listaCompras'>
             <!-- conteudo -->
         </div>
+
+        <!-- inserção novo item -->
+        <div class="lista_novo_item" id="novoItem">
+            <input type="text" id="inputNovoItem" placeholder="Digite e pressione o botão INSERIR para adicionar o produto">
+            <button class="btn_inserir" onclick="inserirItem()">INSERIR </button>
+        </div>
+
+        <!-- totais e contadores -->
+        <div class="total">Valor Total:</div>
+        <div class="total">Numero de Itens:</div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>

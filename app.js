@@ -1,6 +1,8 @@
 "use strict";
 
-let nomePag = '';
+/**
+ * Seção header, botão filtro
+ */
 
 function trocaNome(nomePagina){
     localStorage.setItem('nomePagina', JSON.stringify(nomePagina)) 
@@ -14,3 +16,4 @@ document.getElementById("menuBotao").onclick = function() {mostrar()};
 function mostrar() {
     document.getElementById("menuPrincipal").classList.toggle("mostrar");
 }
+

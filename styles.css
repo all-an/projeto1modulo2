@@ -1,8 +1,9 @@
+/* body, html e variaveis */
 :root {
     --primeira-cor: #fdfdfc;
     --segunda-cor: #2791d8;
     --terceira-cor: #3fa2c9;
-    --quarta-cor: black;
+    --quarta-cor: #1d1e1f;
 }
 
 * {
@@ -20,6 +21,7 @@ body {
     font: bold 2rem 'Open Sans', sans-serif;
 }
 
+/* botão, header e menu */
 .menu {
     width: 100%;
     position: relative;
@@ -43,17 +45,28 @@ body {
     color: var(--segunda-cor);
 }
 
+.menu-filtro {
+    display: none;
+    position: relative;
+    background-color: var(--segunda-cor);
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
 .menu-filtro a {
     align-content: center;
     display: inline-block;
     position: relative;
-    color: var(--quarta-cor);
+    color: var(--primeira-cor);
     padding: 12px 16px;
     text-decoration: none;
 }
 
 .menu-filtro a:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primeira-cor);
+    color: var(--segunda-cor);
 }
 
 .mostrar {
@@ -78,6 +91,7 @@ body {
     color: var(--primeira-cor);
 }
 
+/* div principal, lista de compras, lista compras e inserções */
 .lista {
     display: flex;
     width: 50vw;
