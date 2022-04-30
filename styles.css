@@ -33,11 +33,45 @@ body {
     font-size: 26px;
     border: none;
     cursor: pointer;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(63, 63, 63, 0.2);
 }
 
 .abrefiltro-button:hover,
 .abrefiltro-button:focus {
     background-color: var(--primeira-cor);
     color: var(--segunda-cor);
+}
+
+.header_lista_compras {
+    display: flex;
+    background-color: var(--segunda-cor);
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px var(--segunda-cor);
+    font-size: 3rem;
+    color: var(--primeira-cor);
+}
+
+.lista {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.lista_titulo {
+    display: flex;
+    background-color: var(--segunda-cor);
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px var(--segunda-cor);
+    font-size: 3rem;
+    color: var(--primeira-cor);
 }
