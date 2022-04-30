@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--primary-color);
+    font: bold 2rem 'Open Sans', sans-serif;
+}
+
+.menu {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    width: 100%;
+    background-color: #3fa2c9;
+    color: var(--primary-color);
+    padding: 16px;
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
