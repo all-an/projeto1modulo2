@@ -75,3 +75,10 @@ body {
     font-size: 3rem;
     color: var(--primeira-cor);
 }
+
+.lista_compras {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
