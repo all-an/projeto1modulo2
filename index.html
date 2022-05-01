@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="styles.css">
     <title>Lista de Compras</title>
 </head>
-<body>
+<body onload="atualizarTela()">
 
     <!-- menu filtro, botão e afins -->
     <header>
+        <button class="modo-escuro-button" id="modo-escuro-button" onclick="escurecerClarear()">MODO ESCURO</button>
         <div class="menu">
             <button id="menuBotao" class="abrefiltro-button" >Filtrar</button>
             <div id="menuPrincipal" class="menu-filtro" onClick="document.location.reload(true)">
-                <a onclick="trocaNome('Todos os Itens')" href="#todos">Todos os Itens</a>
-                <a onclick="trocaNome('Comprados')" href="#comprados">Comprados</a>
-                <a onclick="trocaNome('Pendentes')" href="#pendentes">Pendentes</a>
+                <a onclick="trocaNome('Todos os Itens')">Todos os Itens</a>
+                <a onclick="trocaNome('Comprados')">Comprados</a>
+                <a onclick="trocaNome('Pendentes')">Pendentes</a>
             </div>
         </div>
-        <div id="principal" class="header_lista_compras">Todos os Itens</div>
+        <div id="principal" class="header_lista_compras">Todos os Itens</div>    
     </header>
 
     <!-- div principal, lista compras, inserção e afins -->
@@ -31,14 +32,14 @@
         </div>
 
         <!-- inserção novo item -->
-        <div class="lista_novo_item" id="novoItem">
+        <div class="input_novo_item" id="novoItem">
             <input type="text" id="inputNovoItem" placeholder="Digite e pressione o botão INSERIR para adicionar o produto">
             <button class="btn_inserir" onclick="inserirItem()">INSERIR </button>
         </div>
 
         <!-- totais e contadores -->
-        <div class="total">Valor Total:</div>
-        <div class="total">Numero de Itens:</div>
+        <div class="total" id="valorTotalDosItens">Valor total:</div>
+        <div class="total" id="numeroDeItens">Número de Itens:</div>
     </div>
 
     <script src="app.js"></script>

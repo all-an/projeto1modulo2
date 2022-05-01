@@ -3,7 +3,9 @@
     --primeira-cor: #fdfdfc;
     --segunda-cor: #2791d8;
     --terceira-cor: #3fa2c9;
-    --quarta-cor: #1d1e1f;
+    --quarta-cor: #353636;
+    --quinta-cor: #fff59d;
+    --sexta-cor: #4a4b4d;
 }
 
 * {
@@ -14,6 +16,7 @@
 
 html {
     font-size: 62.5%;
+    font-family: sans-serif;
 }
 
 body {
@@ -22,6 +25,29 @@ body {
 }
 
 /* botão, header e menu */
+
+.modo-escuro-button{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    background-color: var(--sexta-cor);
+    color: var(--primeira-cor);
+    height: 50px;
+    font-size: 18px;
+    font-weight:580;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 8px 0px var(--quarta-cor);
+}
+
+.modo-escuro-button:hover,
+.modo-escuro-button:focus {
+    background-color: var(--sexta-cor);
+    color: var(--primeira-cor);
+}
+
+
+
 .menu {
     width: 100%;
     position: relative;
@@ -33,7 +59,8 @@ body {
     background-color: var(--terceira-cor);
     color: var(--primeira-cor);
     padding: 16px;
-    font-size: 26px;
+    font-size: 30px;
+    font-weight:580;
     border: none;
     cursor: pointer;
     box-shadow: 0px 8px 16px 0px var(--quarta-cor);
@@ -45,13 +72,17 @@ body {
     color: var(--segunda-cor);
 }
 
+.blacking {
+    color:black;
+}
+
 .menu-filtro {
     display: none;
     position: relative;
     background-color: var(--segunda-cor);
     width: 100%;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px var(--quarta-cor);
     text-align: center;
 }
 
@@ -62,6 +93,7 @@ body {
     color: var(--primeira-cor);
     padding: 12px 16px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .menu-filtro a:hover {
@@ -76,7 +108,7 @@ body {
 
 .esconder {
     display: inline-block;
-    position: relative;
+    position: fixed;
 }
 
 .header_lista_compras {
@@ -119,4 +151,105 @@ body {
     width: 100%;
     flex-direction: column;
     gap: 10px;
+}
+
+/* inserção de novo item */
+
+.input_novo_item {
+    display: flex;
+    background-color: var(--quinta-cor);
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px var(--segunda-cor);
+    margin: 10px;
+    font: inherit;
+}
+
+.input_novo_item>input {
+    background-color: var(--quinta-cor);
+    color:var(--quarta-cor);
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+}
+
+.input_novo_item>input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.btn_inserir {
+    display: flex;
+    background-color: var(--segunda-cor);
+    height: 48px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 8px var(--segunda-cor);
+    font-size: 2rem;
+    color: var(--primeira-cor);
+}
+
+.btn_inserir:hover,
+.btn_inserir:focus {
+    cursor: pointer;
+}
+
+/* novo item */
+
+.item { 
+    color: var(--segunda-cor);
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 1px 5px var(--segunda-cor);
+}
+
+.item>div {
+    width: 80%;
+}
+
+.lista_item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: var(--segunda-cor);
+    color: var(--primeira-cor);
+}
+
+.item>input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.item>input[type='button'],
+.item>input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+
+.item>input[type='checkbox']:checked+div {
+    text-decoration: line-through;
+}
+
+/* total e contador */
+
+.total {
+    display: flex;
+    background-color: var(--segunda-cor);
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px var(--segunda-cor);
+    font-size: 3rem;
+    color: var(--primeira-cor);
 }
